@@ -24,8 +24,8 @@ def diffuser(n: int) -> QuantumCircuit:
 
 def grover_circuit(target: str) -> QuantumCircuit:
     n = len(target)
-    iterations = math.floor(math.pi / 4 * math.sqrt(2**n))
-
+    iterations = int(math.sqrt(n))
+    
     qc = QuantumCircuit(n)
     qc.h(range(n))
 
